@@ -18,11 +18,20 @@ body {
   display: flex;
 }
 
+.main > div:last-child {
+  flex-direction: column;
+}
+
 .image-container {
-  width: 50%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .image-container img {
-  height: 200px;
+  height: 100%;
   flex-shrink: 1;
+}
+
+.right > div {
+  max-height: calc(100vh - 33%);
 }
