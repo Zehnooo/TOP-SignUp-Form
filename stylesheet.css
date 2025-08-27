@@ -35,7 +35,7 @@ ol[role="list"] {
 /* Set core body defaults */
 body {
   max-height: 100vh;
-  line-height: 1.5;
+  line-height: 1;
   margin: 0;
   padding: 0;
 }
@@ -160,7 +160,8 @@ textarea:not([rows]) {
 }
 
 .right > div {
-  max-height: 50%;
+  min-height: 20%;
+  max-height: 33%;
 }
 
 .right div:nth-child(odd) {
@@ -182,11 +183,16 @@ textarea:not([rows]) {
 .mono {
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .block {
   font-family: "Cinzel Decorative", serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.text {
+  font-size: 2rem;
+  padding: 2rem;
 }
