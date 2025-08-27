@@ -59,12 +59,6 @@ h4 {
   text-wrap: balance;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
 /* Make images easier to work with */
 img,
 picture {
@@ -144,7 +138,7 @@ textarea:not([rows]) {
   height: max(150px, 15vh);
 }
 .odin-bar p {
-  font-size: 4rem;
+  font-size: 6rem;
   letter-spacing: 0.5rem;
 }
 
@@ -159,10 +153,18 @@ textarea:not([rows]) {
 .right > div {
   height: 33.33%;
   display: flex;
+  width: 100%;
+  padding: 2rem;
 }
 
 .right > div:nth-child(odd) {
   background-color: rgba(240, 240, 240, 0.5);
+}
+
+.section-one,
+.section-two,
+.section-three {
+  display: flex;
 }
 
 .section-one {
@@ -178,18 +180,52 @@ textarea:not([rows]) {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+}
+
+.section-three div {
+  margin-left: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.section-three p {
+  font-size: 18px;
+}
+
+button {
+  background-color: rgb(161, 77, 64);
+  color: snow;
+  font-size: max(18px, 1.2rem);
+  font-weight: bolder;
+  border-radius: 8px;
+  border: 0;
+  padding: 15px;
+  width: max(250px, 20%);
+  pointer-events: pointer;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px 3px rgb(0 0 0 / 10%);
 }
 
 form {
+  width: 100%;
   padding: 10px;
   gap: 10px;
   display: flex;
 }
 
+fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
 form div {
   display: flex;
-  gap: 20px;
   width: 75%;
   margin: 10px;
 }
@@ -198,17 +234,57 @@ input {
   border-radius: 8px;
   padding: 2px;
   height: 1.75rem;
-  min-width: 175px;
+  min-width: 2rem;
+  width: max(75px, 75%);
   border: 1px solid lightgray;
 }
 
+input:valid {
+  border: 1px solid lightgreen;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid rgb(127, 116, 101) !important;
+  box-shadow: 1px 1px 4px 2px rgb(0 0 0 / 10%);
+  transform: translateY(-2px);
+}
+input:invalid {
+  border: 1px solid rgb(161, 77, 64);
+}
+
 label {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  letter-spacing: 0.05rem;
+  width: max(75px, 75%);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(161, 77, 64);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: rgb(127, 116, 101);
 }
 
 .set {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.group {
+  gap: 40px;
+  width: 100%;
 }
 
 .credits {
