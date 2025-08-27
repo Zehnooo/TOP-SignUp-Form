@@ -99,15 +99,17 @@ textarea:not([rows]) {
   flex-direction: row;
 }
 
-.main > div {
-  min-width: max(550px, 2rem);
-  width: 50%;
+.left {
+  width: 40%;
   height: 100%;
   display: flex;
   padding: 10px;
 }
-
-.main > div:last-child {
+.right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  padding: 10px;
   flex-direction: column;
 }
 
@@ -125,7 +127,7 @@ textarea:not([rows]) {
 }
 
 .odin-bar {
-  height: 300px;
+  height: 250px;
   color: snow;
   min-height: max-content;
   flex: 1;
@@ -142,10 +144,10 @@ textarea:not([rows]) {
 }
 
 .odin-bar img {
-  height: max(250px, 15vh);
+  height: max(150px, 15vh);
 }
 .odin-bar p {
-  font-size: 6rem;
+  font-size: 4rem;
   letter-spacing: 0.5rem;
 }
 
@@ -158,7 +160,11 @@ textarea:not([rows]) {
 }
 
 .right > div {
-  max-height: 33%;
+  max-height: 50%;
+}
+
+.right div:nth-child(odd) {
+  background-color: lightgray;
 }
 
 .credits {

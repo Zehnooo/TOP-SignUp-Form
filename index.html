@@ -49,7 +49,7 @@
           <p>You <em>know</em> you want to.</p>
         </div>
         <div class="section-two">
-          <form action="post">
+          <form id="sign-up" action="POST">
             <fieldset>
               <label for="first_name">First Name</label>
               <input type="text" name="first_name" id="first_name" />
@@ -68,14 +68,14 @@
                 id="confirm_password"
               />
             </fieldset>
-            <div>
-              <button>Create Account</button>
-              <p>Already have an account? <a href="#">Log in</a></p>
-            </div>
           </form>
         </div>
-        <div class="section-three"></div>
-      </div>
+        <div class="section-three">
+          <div>
+          <button type="submit" form="sign-up">Create Account</button>
+              <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </div>
     </div>
   </body>
 </html>
