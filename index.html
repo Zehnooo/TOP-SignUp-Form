@@ -53,30 +53,45 @@
           <h1 class="text pad">Let's do this!</h1>
           <form id="sign-up" action="POST">
             <fieldset>
-              <div>
-            <div>
+              <div class="group">
+            <div class="set">
 <label for="first_name">First Name</label>
               <input type="text" name="first_name" id="first_name" />
              </div> 
-             <div>
+             <div class="set">
  <label for="last_name">Last Name</label>
               <input type="text" name="last_name" id="last_name" />
              </div>
               </div>
  
-             
-              <label for="email">Email</label>
+             <div class="group">
+              <div class="set">
+                 <label for="email">Email</label>
               <input type="email" name="email" id="email" />
-              <label for="number">Phone Number</label>
+              </div>
+              <div class="set">
+<label for="number">Phone Number</label>
               <input type="number" name="phone_number" id="phone_number" />
-              <label for="password">Password</label>
+              </div>
+             </div>
+             
+              <div class="group">
+                     <div class="set">
+  <label for="password">Password</label>
               <input type="password" name="password" id="password" />
-              <label for="confirm_password">Confirm Password</label>
+                     </div>
+              <div class="set">
+                 <label for="confirm_password">Confirm Password</label>
               <input
                 type="password"
                 name="confirm_password"
                 id="confirm_password"
               />
+              </div>
+              </div>
+         
+            
+             
             </fieldset>
           </form>
         </div>

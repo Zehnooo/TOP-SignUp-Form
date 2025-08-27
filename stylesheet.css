@@ -184,6 +184,7 @@ textarea:not([rows]) {
 form {
   padding: 10px;
   gap: 10px;
+  display: flex;
 }
 
 form div {
@@ -196,12 +197,18 @@ form div {
 input {
   border-radius: 8px;
   padding: 2px;
-  height: 2rem;
+  height: 1.75rem;
   min-width: 175px;
+  border: 1px solid lightgray;
 }
 
 label {
   font-size: 18px;
+}
+
+.set {
+  display: flex;
+  flex-direction: column;
 }
 
 .credits {
