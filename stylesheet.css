@@ -102,8 +102,7 @@ picture {
 }
 
 .odin-bar {
-  min-height: fit-content;
-  height: clamp(2rem, 20%, 20%);
+  padding: clamp(8px, 2.5vh, 24px);
   color: snow;
   width: 100%;
   z-index: 1;
@@ -112,18 +111,21 @@ picture {
   align-items: center;
   text-align: center;
   justify-content: center;
-  gap: 0px 25px;
+  gap: clamp(12px, 4vw, 40px);
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(4px);
 }
 
 .odin-bar img {
-  width: clamp(75px, 150px, 100%);
+  width: 20%;
   flex-shrink: 1;
 }
 .odin-bar p {
-  font-size: clamp(4px, 6rem, 8rem);
+  font-size: clamp(24px, 8vw, 96px);
+  flex-shrink: 1;
   letter-spacing: 0.5rem;
+  white-space: nowrap;
+  text-wrap: nowrap;
 }
 
 .image-container div {
