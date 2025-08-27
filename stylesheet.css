@@ -74,8 +74,7 @@ picture {
 .main {
   display: grid;
   grid-template-columns: 40% 60%;
-
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .left {
@@ -84,16 +83,14 @@ picture {
 .right {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  background: #fff;
 }
 
 .image-container {
   height: 100%;
   position: relative;
   overflow: hidden;
-}
-
-.image-container img[src*="unsplash"] {
-  z-index: -1;
 }
 
 .image-container > img {
@@ -105,9 +102,9 @@ picture {
 }
 
 .odin-bar {
-  height: 12%;
+  min-height: fit-content;
+  height: clamp(2rem, 20%, 20%);
   color: snow;
-
   width: 100%;
   z-index: 1;
   display: flex;
@@ -121,10 +118,11 @@ picture {
 }
 
 .odin-bar img {
-  height: min(150px, 15vh);
+  width: clamp(75px, 150px, 100%);
+  flex-shrink: 1;
 }
 .odin-bar p {
-  font-size: 6rem;
+  font-size: clamp(4px, 6rem, 8rem);
   letter-spacing: 0.5rem;
 }
 
@@ -137,14 +135,11 @@ picture {
 }
 
 .right > div {
-  height: 33.33%;
+  min-height: auto;
+  max-height: none;
   display: flex;
   width: 100%;
   padding: 2rem;
-}
-
-.right > div:nth-child(odd) {
-  background-color: rgba(240, 240, 240, 0.5);
 }
 
 .section-one,
@@ -156,10 +151,14 @@ picture {
 .section-one {
   justify-content: flex-end;
   flex-direction: column;
+  border-bottom: 1px solid #eee;
 }
 
 .section-one p {
   margin-right: 20%;
+}
+.section-one :first-child {
+  margin-top: 20%;
 }
 .section-one :last-child {
   margin-bottom: 3rem;
@@ -167,9 +166,9 @@ picture {
 
 .section-two {
   box-shadow: 5px 4px 6px 4px rgb(0 0 0 / 20%);
-  z-index: 2;
   display: flex;
   flex-direction: column;
+  border-bottom: 2px solid #eee;
 }
 
 .section-three div {
@@ -188,20 +187,30 @@ picture {
   font-size: 18px;
 }
 
+h1 {
+  padding: 10px;
+}
+
 form {
   width: 100%;
+  height: auto;
   padding: 10px;
   gap: 10px;
-  display: flex;
+  display: block;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   width: 75%;
+  height: auto;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 form div {
+  height: auto;
   display: flex;
   width: 75%;
   margin: 10px;
@@ -211,8 +220,8 @@ input {
   border-radius: 4px;
   padding: 10px;
   height: 1.75rem;
-  width: max(300px, 30%);
-  min-width: 75px;
+  width: 100%;
+  min-width: 0;
   border: 1px solid lightgray;
   font-size: 1.25rem;
 }
