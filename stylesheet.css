@@ -66,20 +66,6 @@ picture {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-/* Make sure textarea without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
   scroll-margin-block: 5ex;
@@ -202,20 +188,6 @@ textarea:not([rows]) {
   font-size: 18px;
 }
 
-button {
-  background-color: rgb(161, 77, 64);
-  color: snow;
-  font-size: max(18px, 1.2rem);
-  font-weight: bolder;
-  border-radius: 8px;
-  border: 0;
-  padding: 15px;
-  width: max(250px, 20%);
-  pointer-events: pointer;
-  cursor: pointer;
-  box-shadow: 1px 1px 4px 3px rgb(0 0 0 / 10%);
-}
-
 form {
   width: 100%;
   padding: 10px;
@@ -236,25 +208,22 @@ form div {
 }
 
 input {
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 10px;
   height: 1.75rem;
+  width: max(300px, 30%);
+  min-width: 75px;
   border: 1px solid lightgray;
   font-size: 1.25rem;
-  size: 20ch;
-}
-
-input:valid {
-  border: 1px solid lightgreen;
 }
 
 input:focus {
+  color: black;
   outline: none;
-  border: 1px solid rgb(127, 116, 101) !important;
+  border: 1px solid rgb(174, 193, 204) !important;
   box-shadow: 1px 1px 4px 2px rgb(0 0 0 / 10%);
-  transform: translateY(-2px);
 }
-input:invalid {
+.check:invalid {
   border: 1px solid rgb(161, 77, 64);
 }
 
@@ -265,6 +234,29 @@ label {
   text-wrap: nowrap;
   letter-spacing: 0.05rem;
   width: max(75px, 75%);
+}
+
+button {
+  background-color: rgb(161, 77, 64);
+  color: snow;
+  font-size: max(18px, 1.2rem);
+  font-weight: bolder;
+  border-radius: 8px;
+  border: 0;
+  padding: 15px;
+  width: max(250px, 20%);
+  pointer-events: pointer;
+  cursor: pointer;
+  box-shadow: 1px 1px 4px 3px rgb(0 0 0 / 10%);
+  transition: transform ease-in 0.04s;
+}
+
+button:hover {
+  transform: scale(105%);
+}
+
+button:active {
+  transform: scale(95%);
 }
 
 a {
