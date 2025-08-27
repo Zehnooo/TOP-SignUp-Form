@@ -34,8 +34,10 @@ ol[role="list"] {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  max-height: 100vh;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -104,9 +106,8 @@ body {
 }
 
 .main > div {
-  border: 2px solid yellow;
   width: 50%;
-  height: 100vh;
+  height: 100%;
   display: flex;
 }
 
@@ -121,7 +122,7 @@ body {
 }
 
 .image-container img {
-  height: 90%;
+  height: 100%;
   flex-shrink: 1;
 }
 
